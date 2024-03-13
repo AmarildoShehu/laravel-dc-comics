@@ -1,0 +1,81 @@
+@use "vars" as *;
+
+footer {
+    background-image: url("../img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+}
+
+#footer-top {
+    background-image: url("../img/dc-logo-bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    height: 400px;
+
+    .row {
+        height: 100%;
+        gap: 1rem;
+        flex-direction: column;
+        align-content: start;
+
+        h4 {
+            text-transform: uppercase;
+            font-size: larger;
+        }
+
+        ul {
+            margin: 1rem 0;
+
+            li a {
+                font-family: $open-sans;
+                color: $gray-color;
+                text-transform: capitalize;
+                font-size: small;
+                line-height: 1.3rem;
+
+                &:hover {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    p,
+    span {
+        font-size: small;
+        color: $gray-color;
+        font-family: $open-sans;
+
+        a {
+            color: $primary-color;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#footer-bottom {
+    background-color: $footer-color;
+    padding: 2rem 0;
+}
+
+#footer-bottom-nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .follow-btn {
+        color: $primary-color;
+        font-size: 1.4rem;
+    }
+
+    img:hover {
+        filter: brightness(200%);
+    }
+}

@@ -1,0 +1,50 @@
+@use "vars" as *;
+
+header {
+    background-color: $white-color;
+    padding: 15px 0;
+
+    ul {
+        gap: 2rem;
+
+        li a {
+            text-transform: uppercase;
+            color: $dark-gray-color;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding-bottom: 37px;
+
+            &:hover,
+            &.active {
+                color: $primary-color;
+                border-bottom: 5px solid $primary-color;
+            }
+        }
+    }
+
+    figure {
+        width: 70px;
+    }
+
+    form {
+        position: relative;
+
+        input {
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            text-align: end;
+            padding-right: 30px;
+            font-family: $roboto-condensed;
+            font-weight: bold;
+        }
+
+        button {
+            position: absolute;
+            border: none;
+            background-color: transparent;
+            top: 3px;
+            right: 5px;
+            color: $primary-color;
+        }
+    }
+}

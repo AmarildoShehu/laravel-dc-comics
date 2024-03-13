@@ -1,0 +1,23 @@
+@use "vars" as *;
+
+body {
+    font-family: $roboto-condensed;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}

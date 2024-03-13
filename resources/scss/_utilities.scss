@@ -1,0 +1,55 @@
+@use "vars" as *;
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.btn {
+    color: $white-color;
+    background-color: $primary-color;
+    font-weight: 600;
+    border: 2px solid $primary-color;
+}
+
+.btn-label {
+    font-size: 2rem;
+    padding: 0.5rem 2.5rem;
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    translate: 0 -50%;
+}
+
+.btn-more {
+    font-size: small;
+    padding: 10px 50px;
+}
+
+.btn-signup {
+    padding: 13px;
+    font-family: $open-sans;
+    background-color: transparent;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.color-white {
+    color: $white-color;
+}
+
+.color-light-green {
+    color: $light-green;
+}
