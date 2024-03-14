@@ -7,9 +7,9 @@
 <main class="comics">    
     <section class="wrapper flex flex-column position-relative">
         <div class="row">
-            @foreach ($comics=config('comics') as $index => $comic)                
+            @foreach ($comics as $index => $comic)               
             <div class="card">
-                <a href="{{route('comic', $index)}}">
+            <a href="{{route('comics.show', $index)}}">
                     <div class="card-img">
                     <img src="{{asset($comic['thumb'])}}" alt="{{$comic['series']}}">
                     </div>

@@ -1,7 +1,7 @@
 <?php
 return [
     ["text" => 'Characters', "url" => '#', "current" => false,],
-    ["text" => 'Comics', "url" => "comics", "current" => true,],
+    ["text" => 'Comics', "url" => "comics.index", "current" => true,],
     ["text" => 'Movies', "url" => '#', "current" => false,],
     ["text" => 'TV', "url" => '#', "current" => false,],
     ["text" => 'Games', "url" => '#', "current" => false,],
