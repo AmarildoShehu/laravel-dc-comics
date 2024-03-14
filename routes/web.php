@@ -19,8 +19,4 @@ Route::get('/', HomeController::class)->name('#');
 
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
-Route::get('/comics/{index}', function ($index) {
-    $comics = config('comics');
-    $comic = $comics[$index];
-    return view('comics.show', compact('comic'));
-})->name('comics.show');
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');

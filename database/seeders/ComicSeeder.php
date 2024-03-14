@@ -227,11 +227,11 @@ class ComicSeeder extends Seeder
             ],
         ];
         foreach ($comics as $comic) {
-            $new_comic = new Comic;
             
-            $comic['artists'] = implode(',', $comic['artists']);
-            $comic['writers'] = implode(',', $comic['writers']);
+            $comic['artists'] = implode(', ', $comic['artists']);
+            $comic['writers'] = implode(', ', $comic['writers']);
             
+            $new_comic = new Comic();
             $new_comic->fill($comic);
             $new_comic->save();
         }
