@@ -18,7 +18,10 @@
             </div>
             @endforeach
         </div>
-        <a href="" class="btn btn-more">LOAD MORE</a>
+        <div class="flex gap-20">
+            <a href="" class="btn btn-more">LOAD MORE</a>
+            <a href="{{route('comics.create')}}" class="btn btn-more">AGGIUNGI FUMETTO</a>
+        </div>
         <div class="btn btn-label"> CURRENT SERIES</div>
     </section>
 </main>

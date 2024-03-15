@@ -2,7 +2,7 @@
 
 @section('main')
 <main>
-    <form action="" method="POST">
+    <form action="{{route('comics.store')}}" method="POST">
         <div class="wrapper">
             <div class="row">
                 <div class="col">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col">
                     <label for="sale_date">Date di uscita</label>
-                    <input id="sale_date" name="sale_date" type="text" placeholder="Data">
+                    <input id="sale_date" name="sale_date" type="date" placeholder="Data">
                 </div>
                 <div class="col">
                     <label for="type">Tipologia</label>
@@ -43,6 +43,7 @@
                 </div>                
             </div>
         </div>
+        <button type="submit" class="btn btn-more">Invia</button>
     </form>
 </main>
 
