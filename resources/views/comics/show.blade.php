@@ -5,7 +5,7 @@
 @section('main')
 <main class="comic">
     <section class="cover-section">
-        <div class="wrapper">
+        <div class="wrapper-small">
             <figure >
                 <p class="cover-label up-right">COMIC BOOK</p>
                 <img src="{{$comic->thumb}}" alt="{{$comic->title}}">       
@@ -14,7 +14,7 @@
         </div>
     </section>
     <section class="preview">
-        <div class="wrapper">            
+        <div class="wrapper-small">            
             <div class="text-section">
                 <h2>{{$comic->title}}</h2>
                 <div class="flex">
@@ -35,7 +35,7 @@
         </div>
     </section>
     <section class="infos">
-        <div class="wrapper">
+        <div class="wrapper-small">
             <div class="talent">
                 <h2>Talent</h2>
                 <ul>
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="links">
-            <div class="container">
+            <div class="wrapper-small">
                 <ul class="flex">
                     <li><a href="">DIGITAL COMICS <img src="{{asset('images/cta-icons.png')}}" alt="ok"> </a> </li>
                     <li><a href="">SHOP DC <img src="{{asset('images/cta-icons.png')}}" alt="ok"> </a> </li>

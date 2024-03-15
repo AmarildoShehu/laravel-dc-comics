@@ -1,5 +1,5 @@
 @extends('layouts/main_templates')
 
-@section('main')
+<!-- @section('main')
     <h1>altra PPPPP</h1>
-@endsection
+@endsection -->

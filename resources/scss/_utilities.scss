@@ -1,6 +1,6 @@
 @use "vars" as *;
 
-.wrapper {
+.wrapper-small {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -13,6 +13,19 @@
 
 .flex-column {
     flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 30%;
+}
+
+.col-100 {
+    flex-basis: 100%;
 }
 
 .btn {
