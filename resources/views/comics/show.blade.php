@@ -8,7 +8,7 @@
         <div class="wrapper">
             <figure >
                 <p class="cover-label up-right">COMIC BOOK</p>
-                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">        
+                <img src="{{$comic->thumb}}" alt="{{$comic->title}}">       
                 <p class="cover-label bottom">VIEW GALLERY</p>
             </figure>        
         </div>
@@ -16,17 +16,17 @@
     <section class="preview">
         <div class="wrapper">            
             <div class="text-section">
-                <h2>{{$comic['title']}}</h2>
+                <h2>{{$comic->title}}</h2>
                 <div class="flex">
                     <div class="flex comic-available label-available">
-                        <p class="color-light-green">US Price: <span class="color-white">{{$comic['price']}}</span></p>
+                    <p class="color-light-green">US Price: <span class="color-white">{{$comic->price}}</span></p>
                         <p class="color-light-green">AVAILABLE</p>
                     </div>
                     <div class="color-white label-available">
                         Check Availability <i class="fa-solid fa-caret-down"></i>
                     </div>
                 </div>
-                <p class="description">{{$comic['description']}}</p>
+                <p class="description">{{$comic->description}}</p>
             </div>
             <div class="adv">
                 <p>ADVERTISEMENT</p>
@@ -42,7 +42,7 @@
                     <li class="flex">
                         <div>Art by:</div>
                         <div class="list-people">
-                            @foreach ( explode(', ', $comic['artists'])  as  $artist)
+                            @foreach ( explode(', ', $comic->artists)  as  $artist)
                                 <a href="#">{{$artist}}</a>, 
                                 @if($loop->last)
                                     <a href="#">{{$artist}}</a>
@@ -53,7 +53,7 @@
                     <li class="flex">
                         <div>Written by:</div>
                         <div class="list-people">
-                            @foreach ( explode(', ', $comic['writers']) as  $writer)
+                            @foreach ( explode(', ', $comic->writers) as  $writer)
                                 <a href="#">{{$writer}}</a>, 
                                 @if($loop->last)
                                     <a href="#">{{$writer}}</a>
@@ -69,19 +69,19 @@
                     <li class="flex">
                         <div>Series:</div>
                         <div class="list-people">
-                            <a href="#">{{$comic['series']}}</a>
+                            <a href="#">{{$comic->series}}</a>
                         </div>
                     </li>
                     <li class="flex">
                         <div>U.S. Price:</div>
                         <div class="list-people">
-                            {{$comic['price']}}
+                            {{$comic->price}}
                         </div>
                     </li>
                     <li class="flex">
                         <div>On Sale Date:</div>
                         <div class="list-people">
-                            {{date_format(date_create($comic['sale_date']), "M d Y")}}
+                            {{date_format(date_create($comic->sale_date), "M d Y")}}
                         </div>
                     </li>
                 </ul>

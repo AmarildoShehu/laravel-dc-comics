@@ -19,4 +19,8 @@ Route::get('/', HomeController::class)->name('#');
 
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
+// Route per il form
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+// Route per l'oggetto singolo
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');

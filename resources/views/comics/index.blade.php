@@ -9,11 +9,11 @@
         <div class="row">
             @foreach ($comics as $comic)               
             <div class="card">
-            <a href="{{route('comics.show', $comic)}}">
+            <a href="{{route('comics.show', $comic->id)}}">
                     <div class="card-img">
-                    <img src="{{asset($comic['thumb'])}}" alt="{{$comic['series']}}">
+                    <img src="{{asset($comic->thumb)}}" alt="{{$comic->series}}">
                     </div>
-                    <div class="card-text">{{$comic['series']}}</div>
+                    <div class="card-text">{{$comic->series}}</div>
                 </a>
             </div>
             @endforeach
