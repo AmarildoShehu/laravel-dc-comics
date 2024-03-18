@@ -10,7 +10,14 @@
                 <p class="cover-label up-right">COMIC BOOK</p>
                 <img src="{{$comic->thumb}}" alt="{{$comic->title}}">       
                 <p class="cover-label bottom">VIEW GALLERY</p>     
-                <a href="#" class="btn btn-signup">MODIFICA</a>       
+                <div class="flex">
+                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-signup">MODIFICA</a>    
+                    <form action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-signup">CANCELLA</button>    
+                    </form>   
+                </div> 
             </figure>       
         </div>
     </section>

@@ -1,26 +1,32 @@
 @use "vars" as *;
+
 .comic .cover-section {
     background-color: $primary-color;
     height: 100px;
     position: relative;
+
     figure {
         width: 175px;
         position: absolute;
         bottom: 0;
         font-family: $open-sans;
+
         img {
             border: 1px solid $white-color;
         }
+
         .cover-label {
             background-color: $label-color;
             color: $white-color;
             text-align: center;
             padding: 0 5px;
         }
+
         .up-right {
             display: inline-block;
             translate: 1px calc(100% + 1px);
         }
+
         .bottom {
             width: calc(100% - 2px);
             margin: auto;
@@ -29,6 +35,11 @@
     }
 
     a {
+        background-color: yellow;
+        color: black;
+    }
+
+    button {
         background-color: red;
     }
 }
@@ -39,17 +50,21 @@
     padding: 4rem 0;
     font-family: $open-sans;
     border-bottom: 1px solid lightgray;
+
     .wrapper-small {
         display: flex;
         gap: 3rem;
+
         .text-section {
             flex-basis: 60%;
             flex-grow: 0;
             flex-shrink: 0;
+
             h2 {
                 font-family: $roboto-condensed;
                 margin-bottom: 2rem;
             }
+
             .label-available {
                 padding: 15px 20px;
                 border-bottom: 1px solid black;
@@ -57,16 +72,19 @@
                 font-size: small;
                 font-weight: bold;
             }
+
             .comic-available {
                 flex-grow: 1;
                 border-right: 1px solid black;
             }
+
             .description {
                 margin-top: 2rem;
                 line-height: 1.5rem;
                 font-size: small;
             }
         }
+
         .adv {
             p {
                 text-align: end;
@@ -76,34 +94,42 @@
         }
     }
 }
+
 .comic .infos {
     background-color: $light-gray;
     padding-top: 3rem;
+
     .wrapper-small {
         display: flex;
         gap: 3rem;
+
         .talent,
         .specs {
             flex-basis: 50%;
             flex-grow: 0;
             flex-shrink: 0;
+
             h2 {
                 border-bottom: 1px solid lightgray;
                 padding-bottom: 1rem;
                 color: $dark-gray-color;
             }
+
             li {
                 border-bottom: 1px solid lightgray;
                 padding: 10px 0;
                 font-family: $open-sans;
                 font-size: small;
+
                 a {
                     color: $primary-color;
                 }
             }
+
             .flex {
                 align-items: flex-start;
             }
+
             .list-people {
                 flex-basis: 70%;
                 flex-grow: 0;
@@ -111,14 +137,17 @@
             }
         }
     }
+
     .links {
         border-top: 1px solid lightgray;
         margin-top: 3rem;
+
         li {
             flex-basis: calc(100% / 4);
             flex-shrink: 0;
             flex-grow: 0;
             border-left: 1px solid lightgray;
+
             a {
                 display: flex;
                 padding: 1rem;
@@ -127,6 +156,7 @@
                 color: $gray-color;
             }
         }
+
         ul:last-child {
             border-right: 1px solid lightgray;
         }
