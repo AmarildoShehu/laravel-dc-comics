@@ -30,3 +30,6 @@ Route::get('comics/{comic}/edit', [ComicController::class, 'edit'])->name('comic
 
 // Route POST per caricare il nuovo fumetto
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
+// Route per cancellare
+Route::delete('/comics/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');

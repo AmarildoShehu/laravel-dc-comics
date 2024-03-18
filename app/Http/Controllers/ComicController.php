@@ -43,6 +43,9 @@ class ComicController extends Controller
         $data = $request->all();
         $new_comic = new Comic();
         $new_comic->fill($data);
+        $new_comic->save();
+
+        return to_route('comics.show', $new_comic->id);
     }
 
     /**
@@ -58,22 +61,29 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.update', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+
+        $data = $request->all();
+        $comic->fill($data);
+        $comic->save();
+
+        return to_route('comics.show', $comic->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return to_route('comic.index');
     }
 }
