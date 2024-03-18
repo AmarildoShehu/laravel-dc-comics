@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -34,7 +35,7 @@ class ComicController extends Controller
             'description' => 'nullable|string',
             'thumb' => 'required|url:http,https',
             'price' => 'required|string',
-            'serires' => 'required|string',
+            'series' => 'required|string',
             'sale_date' => 'required|string',
             'type' => 'required|string',
             'artists' => 'required|string',
@@ -71,6 +72,17 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
 
+        $data = $request->validate([
+            'title' => ['required', 'string'],
+            'description' => 'nullable|string',
+            'thumb' => ['required', 'url:http,https'],
+            'price' => ['required', 'string'],
+            'series' => ['required', 'string'],
+            'sale_date' => ['required', 'string'],
+            'type' => ['required', 'string'],
+            'artists' => ['required', 'string'],
+            'writers' => ['required', 'string']
+        ]);
         $data = $request->all();
         $comic->fill($data);
         $comic->save();
@@ -84,6 +96,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('comic.index');
+        return to_route('comics.index');
     }
 }
